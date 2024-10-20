@@ -7,29 +7,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    
 
-    if(empty($correo)){
-        echo "Porfavor ingrese correo";
-    }elseif(empty($password)){
-        echo "Porfavor ingrese contraseña";
-    }else{
-        $sql = "SELECT Corres, Contraseña,nombre FROM users WHERE Corres = '$correo'";
+   
+        $sql = "call login_usuario('$correo')";
         $result = mysqli_query($conn,$sql);
-       
         if(mysqli_num_rows($result)>0){    
          $row = mysqli_fetch_assoc($result);
-        $hash = $row["Contraseña"];
-         if(password_verify($password,$hash)){
-          
+         if($password == $row["contraseña"]){
             echo '
             <script>
-            alert("Bienvenido " );
-            window.location = "home.php";
+            alert("Bienvenido" );
+            window.location = "recordar.html";
             </script>
             ';
-         }         
+         } else{
+            echo '<script>  alert("Contraseña incorrecta" );</script>';
+         }        
         }else{
-            echo "Usuario desconocido o no registrado";
-        }
+            echo '<script>  alert("Usuario no encontrado" );</script>';
     }
 }
 mysqli_close($conn);

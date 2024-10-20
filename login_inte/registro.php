@@ -12,7 +12,7 @@ include("connection.php");
             mysqli_query($conn,$sql);
             echo '
             <script>
-              alert("bienvenido '.$nombre.'")
+              alert("Gracias por registrarte '.$nombre.'")
             window.location = "/website/login_inte/login.html";
             </script>
             ';
