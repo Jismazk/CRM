@@ -1,13 +1,20 @@
 create database CRM_1;
 use CRM_1;
 
-create table Usuarios(
-idusuario int primary key auto_increment,
+create table Users(
+iduser int primary key auto_increment not null,
 email varchar(50),
 contraseña varchar(200),
 nombre varchar(50),
 apellido varchar(50)
 );
+
+DELIMITER $$
+create procedure registro_usuario(in email_form varchar(50),in contraseña_form varchar(50),in nombre_form varchar(50),in apellido_form varchar(50),)
+begin
+insert into Users(email,contraseña,nombre,apellido) values(email_form,AES_ENCRYPT('integradora',contraseña_form),nombre_form,apellido_form);
+end
+$$
 
 create table Direccion(
 idDireccion int primary key,
