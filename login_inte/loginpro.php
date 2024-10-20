@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    
 
    
-        $sql = "call login_usuario('$correo')";
+        $sql = "CALL login_usuario('$correo');";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)>0){    
          $row = mysqli_fetch_assoc($result);
@@ -20,10 +20,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </script>
             ';
          } else{
-            echo '<script>  alert("Contraseña incorrecta" );</script>';
+            echo '<script>  alert("Contraseña incorrecta" );
+             window.location = "/website/login_inte/login.html"; </script>';
          }        
         }else{
-            echo '<script>  alert("Usuario no encontrado" );</script>';
+            echo '<script>  alert("Usuario no encontrado" );
+             window.location = "/website/login_inte/login.html";
+              </script>';
     }
 }
 mysqli_close($conn);

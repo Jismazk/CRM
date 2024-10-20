@@ -4,15 +4,41 @@ use CRM_1;
 create table Users(
 iduser int primary key auto_increment not null,
 email varchar(50),
-contraseña varchar(200),
+contraseña blob,
 nombre varchar(50),
 apellido varchar(50)
 );
 
 DELIMITER $$
-create procedure registro_usuario(in email_form varchar(50),in contraseña_form varchar(50),in nombre_form varchar(50),in apellido_form varchar(50),)
+create procedure registro_usuario(in email_form varchar(50),in contraseña_form varchar(50),in nombre_form varchar(50),in apellido_form varchar(50))
 begin
-insert into Users(email,contraseña,nombre,apellido) values(email_form,AES_ENCRYPT('integradora',contraseña_form),nombre_form,apellido_form);
+insert into Users(email,contraseña,nombre,apellido) values(email_form,AES_ENCRYPT(contraseña_form,'integradora'),nombre_form,apellido_form);
+end
+$$
+DELIMITER $$
+DROP procedure login_usuario;
+$$
+
+DELIMITER $$
+call registro_usuario('test','test','test','test');
+$$
+
+DELIMITER $$
+create procedure login_usuario(in email_login varchar(50))
+begin
+ select cast(AES_DECRYPT(contraseña,'integradora') as char) as 'contraseña' from users where email = email_login ;
+end
+$$
+
+select cast(AES_DECRYPT(contraseña,'integradora') as char) from users;
+select contraseña from users;
+insert into users(contraseña) values( AES_ENCRYPT('1234','integradora'));
+
+
+DELIMITER $$
+create procedure verificar_usuario(in pass_login varchar(50),in correo_login varchar(50))
+begin
+
 end
 $$
 
