@@ -87,9 +87,20 @@ foreign key (fkidCliente) references Cliente(idCliente),
 foreign key (fkidEspecial) references Especiales(idEspecial)
 );
 
+create table Usuarios(
+idUsuario int primary key,
+Nombre_Usuario varchar(50),
+correo_Usuario varchar(100),
+contraseña_usuario varchar(200),
+
+);
+
 insert into Direccion values ('1','Portal Del Sol','27442','3314');
 insert into Cliente values ('1','Chevrolet','Detroit',10000,'Activo','1');
-
+insert into Especiales values ('1','Body Part','50','01-10-2024','05-10-2024');
+insert into DetOrdenes values('1','300','12-10-2024','17-10-2024','Activo');
+insert into Ordenes(idOrden,FechaInicio,FechaFinal) values ('1','12-10-2024','17-10-2024');
+insert into Usuarios values ('1','Jaime Enrique','licenciadojaime@outlook.com','contraseña');
 delimiter $$
 create procedure  sp_cambiarestado(in estado varchar(50),in id int)
 begin 
@@ -108,3 +119,4 @@ select * from Cliente
 delimiter $$
 call sp_cambiarestado('Inactivo','1');
 $$
+
