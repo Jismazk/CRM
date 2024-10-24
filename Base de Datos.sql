@@ -101,6 +101,20 @@ insert into Especiales values ('1','Body Part','50','01-10-2024','05-10-2024');
 insert into DetOrdenes values('1','300','12-10-2024','17-10-2024','Activo');
 insert into Ordenes(idOrden,FechaInicio,FechaFinal) values ('1','12-10-2024','17-10-2024');
 insert into Usuarios values ('1','Jaime Enrique','licenciadojaime@outlook.com','contraseña');
+
+create view V_Direccion as
+ select * from Direccion;
+create view V_Cliente as 
+ select *  from Cliente;
+create view V_Especiales as 
+ select * from Especiales;
+create view  V_Detordenes as 
+ select * from DetOrdenes;
+create view V_Ordenes as 
+ select * from Ordenes;
+create view V_Usuarios as 
+ select * from Usuarios;
+
 delimiter $$
 create procedure  sp_cambiarestado(in estado varchar(50),in id int)
 begin 
