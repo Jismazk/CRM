@@ -18,6 +18,7 @@
             <thead>
                 <tr>
                     <th></th>
+                    <th>Empresa</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Telefono</th>
@@ -28,6 +29,7 @@
             <tbody>
                 <tr>
                     <td><input type="checkbox" name="select"></td>
+                    <td>Lear</td>
                     <td>Denisse</label></td>
                     <td>garcia</td>
                     <td>8714279851</td>
@@ -49,7 +51,12 @@
 
     <!-- Esto es el contenido de la ventana -->
     <div id="ventana">
-    <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
+    <h2>Nuevo contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
+
+
+        <label for="text">Empresa</label>
+        <input type="text" placeholder="Nombre de la empresa" id="Empresa" name="">
+
         <label for="Nombre">Nombre</label>
         <input type="text" placeholder="Escribe el nombre" id="Nombre" name="">
 
@@ -59,12 +66,14 @@
         <label for="Telefono">Telefono</label>
         <input type="tel" placeholder="Escribe el numero" id="Telefono" name="">
 
+        <label for="Correo">Correo</label>
+        <input type="text" placeholder="ejem@gmail.com" id="Correo" name="">
+        
         <label for="Direccion">Direccion</label>
         <input type="text" placeholder="Escribe la direccion" id="" name="">
 
-        <label for="Correo">Correo</label>
-        <input type="text" placeholder="ejem@gmail.com" id="Correo" name="">
         <br>
+
         <button id="Añadir">Añadir</button>
     </div>
     <!-- Aqui va la logica -->
