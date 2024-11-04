@@ -30,6 +30,14 @@ h2{
     margin-bottom:15px;
 
 }
+h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+    background: black;
+    border-radius: 10px;
+}
 label{
     font-size: 17px;
     margin-bottom: 10px;
@@ -57,6 +65,7 @@ input{
     margin-bottom: 5px;
 }
 
+
 .registro{
     padding: 15px 30px;
     width: 500px;
@@ -69,5 +78,69 @@ input{
     padding: 15px 30px;
     width: 500px;
 }
+.box-inicio{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 5%;
+}
+.barnav{
+    list-style: none;
+    padding: 0;
+    background: black;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+   
+}
+.barnav li a{
+    text-decoration: none;
+    color:white;
+    padding: 20px;
+    display:block;
+   
+}
+.barnav li{
+    display: inline-block;
+    text-align: center;
+}
+.barnav li a:hover{
+    background: rgb(161, 28, 28);
+}
+td{
+    border: 1px solid grey;
+    text-align: center;
+    background: white;
+    font-size: 18px;
+}
+th{
+    background-color: black;
+    color: white;
+    width: 6rem;
+    border-radius: 5px;
+    font-size: 18px;
+}
+table{
+    border-collapse: collapse;
+}
+.table{
+    display: flex;
+    flex-direction: column;
 
-
+}
+.box-contenido{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 5%;
+}
+.contenido{
+    width: 18rem;
+    height: 18rem;
+    background: rgb(238, 234, 234);
+    border-radius: 5%;
+   text-align: center;
+   box-shadow: 0px 0px 20px black;
+}
