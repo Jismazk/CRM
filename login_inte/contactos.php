@@ -1,3 +1,13 @@
+
+<?php
+include("connection.php");
+$sql = "SELECT  * FROM  contactos";
+$result = mysqli_query($conn,$sql);
+if(!$result){
+    echo "problema con la conexion";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,23 +27,31 @@
         <table>
             <thead>
                 <tr>
-                    <th></th>
+                    
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Telefono</th>
                     <th>email</th>
                     <th>direccion</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><input type="checkbox" name="select"></td>
-                    <td>Denisse</label></td>
-                    <td>garcia</td>
-                    <td>8714279851</td>
-                    <td>@gmail</td>
-                    <td>av central 1098</td>
-                </tr>
+            <?php
+            while( $row = mysqli_fetch_assoc($result)){
+                echo "
+              <tr>
+              <td>".$row["Nombre"]."</td>
+              <td>".$row["Apellido"]."</td>
+              <td>".$row["Direccion"]."</td>
+              <td>".$row["Numero"]."</td>
+              <td>".$row["Correo"]."</td>
+              <td>
+            </tr>
+            "; 
+            }
+           
+            ?>
             </tbody>
         </table>
     </div>
