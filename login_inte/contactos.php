@@ -20,8 +20,18 @@ if(!$result){
 
 
 <body>
-
     <div class="box-inicio">
+    <nav class="barnav">
+            <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="contactos.php">Contactos</a></li>
+            <li><a href="ordenes.html">Órdenes</a></li>
+            <li><a href="candidatos.html">Candidatos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+        </nav>
+        <br>  
+        
     <div class="table">
         <h1>Contactos</h1>
         <table>
@@ -33,7 +43,7 @@ if(!$result){
                     <th>Telefono</th>
                     <th>email</th>
                     <th>direccion</th>
-                    <th></th>
+                    <th></th> 
                 </tr>
             </thead>
             <tbody>
@@ -44,8 +54,8 @@ if(!$result){
               <td>".$row["Nombre"]."</td>
               <td>".$row["Apellido"]."</td>
               <td>".$row["Direccion"]."</td>
-              <td>".$row["Numero"]."</td>
               <td>".$row["Correo"]."</td>
+              <td>".$row["Numero"]."</td>
               <td>
             </tr>
             "; 
@@ -67,23 +77,26 @@ if(!$result){
 
     <!-- Esto es el contenido de la ventana -->
     <div id="ventana">
-    <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
+    
+    <form method="post" action="añadircontacto.php">
+        <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
         <label for="Nombre">Nombre</label>
-        <input type="text" placeholder="Escribe el nombre" id="Nombre" name="">
+        <input type="text" placeholder="Escribe el nombre" id="Nombre" name="contacto-n">
 
         <label for="ApellidoP">Apellido </label>
-        <input type="text" placeholder="Escribe el apellido " id="ApellidoP" name="">
+        <input type="text" placeholder="Escribe el apellido " id="ApellidoP" name="contacto-a">
 
         <label for="Telefono">Telefono</label>
-        <input type="tel" placeholder="Escribe el numero" id="Telefono" name="">
+        <input type="tel" placeholder="Escribe el numero" id="Telefono" name="contacto-t">
 
         <label for="Direccion">Direccion</label>
-        <input type="text" placeholder="Escribe la direccion" id="" name="">
+        <input type="text" placeholder="Escribe la direccion" id="" name="contacto-d">
 
         <label for="Correo">Correo</label>
-        <input type="text" placeholder="ejem@gmail.com" id="Correo" name="">
+        <input type="text" placeholder="ejem@gmail.com" id="Correo" name="contacto-c">
         <br>
-        <button id="Añadir">Añadir</button>
+        <button id="Añadir" type="submit">Añadir</button>
+    </form>
     </div>
     <!-- Aqui va la logica -->
     <script>
