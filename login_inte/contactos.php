@@ -43,7 +43,7 @@ if(!$result){
                     <th>Telefono</th>
                     <th>email</th>
                     <th>direccion</th>
-                    <th></th> 
+                    <th>endswitch</th> 
                 </tr>
             </thead>
             <tbody>
@@ -56,7 +56,8 @@ if(!$result){
               <td>".$row["Direccion"]."</td>
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
-              <td>
+              <td><input type='submit' value='eliminar'>
+              <input type='submit' value='editar'></td>
             </tr>
             "; 
             }
