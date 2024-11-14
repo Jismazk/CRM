@@ -49,7 +49,7 @@ a{
 
 }
 input{
-    padding: 10px 9px;
+    padding: 9px 8px;
     font-size: 17px;
     border: black;
     border-radius: 10px;
@@ -134,7 +134,7 @@ table{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    padding: 5%;
+    padding: 2%;
 }
 .contenido{
     width: 18rem;

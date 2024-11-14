@@ -56,8 +56,10 @@ if(!$result){
               <td>".$row["Direccion"]."</td>
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
-              <td><input type='submit' value='eliminar'>
-              <input type='submit' value='editar'></td>
+              <td><input  type='submit' class='button' value='editar'>
+              <input type='submit' class='button' value='editar'>
+              
+              </td>
             </tr>
             "; 
             }
@@ -79,7 +81,7 @@ if(!$result){
     <!-- Esto es el contenido de la ventana -->
     <div id="ventana">
     
-    <form method="post" action="añadircontacto.php">
+    <form method="post" action="añadircontacto.php" name="añacon">
         <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
         <label for="Nombre">Nombre</label>
         <input type="text" placeholder="Escribe el nombre" id="Nombre" name="contacto-n">
@@ -96,11 +98,22 @@ if(!$result){
         <label for="Correo">Correo</label>
         <input type="text" placeholder="ejem@gmail.com" id="Correo" name="contacto-c">
         <br>
-        <button id="Añadir" type="submit">Añadir</button>
+        <button id="Añadir" type="submit" onclick="return validateForm()">Añadir</button>
     </form>
     </div>
     <!-- Aqui va la logica -->
     <script>
+        function validateForm(){
+            var b = document.forms["añacon"]["contacto-a"].value;
+            var a = document.forms["añacon"]["contacto-n"].value;
+            var c = document.forms["añacon"]["contacto-t"].value;
+            var d = document.forms["añacon"]["contacto-d"].value;
+            var f = document.forms["añacon"]["contacto-c"].value;
+            if(a == "" || b == "" || c == "" ||d == "" ||f == "" ){
+                alert("Favor de rellenar todos los campos ");
+                return false;
+            }
+        }
     const mostrarVentanaBtn = document.getElementById('agregarcontacto');
     const cerrarVentanaBtn = document.getElementById('cerrarVentana');
     const ventana = document.getElementById('ventana');
