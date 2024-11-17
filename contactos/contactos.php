@@ -56,8 +56,8 @@ if(!$result){
               <td>".$row["Direccion"]."</td>
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
-              <td><input  type='submit' class='button' value='editar'>
-              <input type='submit' class='button' value='editar' onclick='test()'>
+              <td><input  type='submit' class='button' onclick='header()'>
+              <input type='submit' class='button' value='editar' onclick='edit_con(".$row["id_contacto"].")'>
               
               </td>
             </tr>
@@ -103,8 +103,8 @@ if(!$result){
     </div>
     <!-- Aqui va la logica -->
     <script>
-        function test(){
-            window.location="/website/login_inte/contactos.php?id=2";
+        function edit_con(a){
+            window.location="website/contactos/añadircontacto.php?id="+a;
         }
         function validateForm(){
             var b = document.forms["añacon"]["contacto-a"].value;

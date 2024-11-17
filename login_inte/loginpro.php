@@ -1,5 +1,6 @@
 <?php
-include("connection.php");
+
+include("../service/connection.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $correo = filter_input(INPUT_POST, "correo-login", FILTER_SANITIZE_SPECIAL_CHARS);
