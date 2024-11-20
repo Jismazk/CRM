@@ -1,5 +1,5 @@
 <?php 
-include("connection.php");
+include("../service/connection.php");
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
     $correo = filter_input(INPUT_POST, "contacto-c", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -15,7 +15,7 @@ include("connection.php");
       echo '
       <script>
         alert("Gracias por registrarte '.$nombre.'")
-        window.location = "/website/login_inte/contactos.php";
+        window.location = "/website/contactos/contactos.php";
       </script>
       ';
  }

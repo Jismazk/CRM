@@ -1,6 +1,6 @@
 
 <?php
-include("connection.php");
+include("../service/connection.php");
 $sql = "SELECT  * FROM  contactos";
 $result = mysqli_query($conn,$sql);
 if(!$result){
@@ -14,7 +14,7 @@ if(!$result){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/estilo.css">
+    <link rel="stylesheet" href="../login_inte/estilo.css">
 
 </head>
 
@@ -23,7 +23,7 @@ if(!$result){
     <div class="box-inicio">
     <nav class="barnav">
             <ul>
-            <li><a href="home.html">Inicio</a></li>
+            <li><a href="../login_inte/home.html">Inicio</a></li>
             <li><a href="contactos.php">Contactos</a></li>
             <li><a href="ordenes.html">Órdenes</a></li>
             <li><a href="candidatos.html">Candidatos</a></li>
@@ -81,7 +81,7 @@ if(!$result){
     <!-- Esto es el contenido de la ventana -->
     <div id="ventana">
     
-    <form method="post" action="añadircontacto.php" name="añacon">
+    <form method="POST" action="añadircontacto.php" name="añacon">
         <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
         <label for="Nombre">Nombre</label>
         <input type="text" placeholder="Escribe el nombre" id="Nombre" name="contacto-n">
