@@ -1,13 +1,13 @@
 <?php
-$to = "somebody@example.com";
+$to = "jismaelzk@outlook.es";
 $subject = "My subject";
 $txt = "Hello world!";
 $headers = "From: webmaster@example.com" . "\r\n" .
 "CC: somebodyelse@example.com";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
+    mail($to,$subject,$txt,$headers);
 }
-mail($to,$subject,$txt,$headers);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
