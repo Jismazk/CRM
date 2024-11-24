@@ -40,9 +40,9 @@ if(!$result){
                     <th>Empresa</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>Telefono</th>
+                    <th>Direccion</th>
                     <th>email</th>
-                    <th>direccion</th>
+                    <th>telefono</th>
                     <th>endswitch</th> 
                 </tr>
             </thead>
@@ -86,7 +86,7 @@ if(!$result){
         <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
 
         <label for="Empresa">Empresa</label>
-        <input type="text" placeholder="Escribe la empresa" id="Empresa" name="empresa">
+        <input type="text" placeholder="Escribe la empresa" id="Empresa" name="contacto-e">
 
         <label for="Nombre">Nombre</label>
         <input type="text" placeholder="Escribe el nombre" id="Nombre" name="contacto-n">

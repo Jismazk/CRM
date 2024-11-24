@@ -7,10 +7,11 @@ include("../service/connection.php");
     $apellido = filter_input(INPUT_POST, "contacto-a", FILTER_SANITIZE_SPECIAL_CHARS);
     $telefono = filter_input(INPUT_POST, "contacto-t", FILTER_SANITIZE_SPECIAL_CHARS);
     $nombre = filter_input(INPUT_POST, "contacto-n", FILTER_SANITIZE_SPECIAL_CHARS);
+    $empresa = filter_input(INPUT_POST, "contacto-e", FILTER_SANITIZE_SPECIAL_CHARS);
     
 
-    $sql = "INSERT INTO `contactos`(`Nombre`, `Apellido`, `Direccion`, `Correo`, `Numero`) 
-    VALUES ('$nombre','$apellido','$direccion','$correo','$telefono')";
+    $sql = "INSERT INTO `contactos`(`Empresa`,`Nombre`, `Apellido`, `Direccion`, `Correo`, `Numero`) 
+    VALUES ('$nombre','$apellido','$direccion','$correo','$telefono','$empresa')";
       mysqli_query($conn,$sql);
       echo '
       <script>
