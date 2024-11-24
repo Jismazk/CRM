@@ -37,7 +37,7 @@ if(!$result){
         <table>
             <thead>
                 <tr>
-                    
+                    <th>Empresa</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Telefono</th>
@@ -51,6 +51,7 @@ if(!$result){
             while( $row = mysqli_fetch_assoc($result)){
                 echo "
               <tr>
+              <td>".$row["Empresa"]."</td>
               <td>".$row["Nombre"]."</td>
               <td>".$row["Apellido"]."</td>
               <td>".$row["Direccion"]."</td>
@@ -83,6 +84,10 @@ if(!$result){
     
     <form method="POST" action="añadircontacto.php" name="añacon">
         <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
+
+        <label for="Empresa">Empresa</label>
+        <input type="text" placeholder="Escribe la empresa" id="Empresa" name="empresa">
+
         <label for="Nombre">Nombre</label>
         <input type="text" placeholder="Escribe el nombre" id="Nombre" name="contacto-n">
 
