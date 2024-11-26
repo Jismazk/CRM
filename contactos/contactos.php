@@ -31,25 +31,25 @@ if(!$result){
         </ul>
         </nav>
         <br>  
-        
-    <div class="table">
         <h1>Contactos</h1>
-        <table>
+    <div class="table">
+        <table class="tablita">
             <thead>
                 <tr>
-                    <th>Empresa</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Direccion</th>
-                    <th>email</th>
-                    <th>telefono</th>
-                    <th>endswitch</th> 
+                    <th >Empresa</th>
+                    <th >Nombre</th>
+                    <th >Apellido</th>
+                    <th >Direccion</th>
+                    <th >email</th>
+                    <th >telefono</th>
+                    <th >endswitch</th> 
                 </tr>
             </thead>
             <tbody>
             <?php
             while( $row = mysqli_fetch_assoc($result)){
                 echo "
+
               <tr>
               <td>".$row["Empresa"]."</td>
               <td>".$row["Nombre"]."</td>
