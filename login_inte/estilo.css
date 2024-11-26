@@ -124,12 +124,12 @@ th{
 }
 table{
     border-collapse: collapse;
-    overflow: scroll;
+    
 }
 .table{
     display: flex;
     flex-direction: column;
-
+    overflow: scroll;
 }
 .box-contenido{
     display: flex;
