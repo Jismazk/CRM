@@ -36,6 +36,8 @@ if(!$result){
 
     <label for="Correo">Correo</label>
     <input type="text" id="Correo" name="contacto-c">
+
+    
     <br>
         <button id="Actualizar" type="submit" onclick="">Actualizar</button>
 
