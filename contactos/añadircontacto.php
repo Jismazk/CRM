@@ -16,11 +16,7 @@ include("../service/connection.php");
       echo '
       <script>
         alert("Gracias por registrarte '.$nombre.'")
-<<<<<<< HEAD
         window.location = "contactos/contactos.php";
-=======
-        window.location = "/contactos/contactos.php";
->>>>>>> 4b2a497274b744f4a2aa5914a836d2765afccf67
       </script>
       ';
  }

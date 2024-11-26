@@ -9,9 +9,16 @@ require '../PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
 require '../PHPMailer-master/PHPMailer-master/src/SMTP.php';
 
 if(!empty($_POST)){
+    $email = $_POST["correo"];
+    $sql = "SELECT * from Users where email = '$email';";
+    $result = mysqli_query($conn,$sql);
+    $row = mysqli_fetch_assoc($result);
+    
+    if(mysqli_num_rows($result) > 0){
+    //correo
     $mail = new PHPMailer(true);
 
-try {
+    try {
     //Server settings
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -22,7 +29,7 @@ try {
 
     //Recipients
     $mail->setFrom('crmutt450@gmail.com', 'Mailer');
-    $mail->addAddress('jismaelzk@outlook.es', 'Joe User');     //Add a recipient
+    $mail->addAddress($row["email"], $row["nombre"]);     //Add a recipient
 
 
     //Content
@@ -30,12 +37,27 @@ try {
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
     $mail->send();
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo '
+    <script>
+    alert("Correo enviado");
+    
+    </script>
+    ';
+    } catch (Exception $e) {
+    echo '<script>
+    alert("Message could not be sent. Mailer Error: {'.$mail->ErrorInfo.'}");
+ 
+    </script>';
+    }
+}else {
+    echo '
+    <script>
+    alert("No se encontro correo");
+    window.location = "home.html";
+    </script>
+    ';
 }
-
 }
 ?>
 <!DOCTYPE html>
