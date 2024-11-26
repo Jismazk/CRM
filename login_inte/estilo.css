@@ -124,6 +124,7 @@ th{
 }
 table{
     border-collapse: collapse;
+    overflow: scroll;
 }
 .table{
     display: flex;
