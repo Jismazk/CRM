@@ -73,7 +73,6 @@ if(!$result){
     <br>
     <!-- Estos son los dos botones -->
     <input type="submit" id="agregarcontacto" value="Agregar">
-    <input type="submit" class="button" value="Eliminar"> 
     </div>
     <!-- Este es el cuadro en el que salen -->
     <div id="fondo"></div>
@@ -82,7 +81,7 @@ if(!$result){
     <div id="ventana">
     
     <form method="post" action="añadircontacto.php" name="añacon">
-        <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
+        <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">x</button></h2>
         <label for="Nombre">Nombre</label>
         <input type="text" placeholder="Escribe el nombre" id="Nombre" name="contacto-n">
 
@@ -154,7 +153,6 @@ if(!$result){
     transform: translate(-50%, -50%);
     width: 400px;
     padding: 20px;
-    background-color: rgb(226, 223, 223);
     border: 1px solid #ccc;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;

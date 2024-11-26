@@ -22,11 +22,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             ';
          } else{
             echo '<script>  alert("Contraseña incorrecta" );
-             window.location = "/website/login_inte/login.html"; </script>';
+             window.location = "login_inte/login.html"; </script>';
          }        
         }else{
             echo '<script>  alert("Usuario no encontrado" );
-             window.location = "/website/login_inte/login.html";
+             window.location = "login_inte/login.html";
               </script>';
     }
 }

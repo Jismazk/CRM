@@ -15,7 +15,7 @@ include("connection.php");
       echo '
       <script>
         alert("Gracias por registrarte '.$nombre.'")
-        window.location = "/website/login_inte/contactos.php";
+        window.location = "login_inte/contactos.php";
       </script>
       ';
  }
