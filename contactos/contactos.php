@@ -74,7 +74,7 @@ if(!$result){
     <br>
     <!-- Estos son los dos botones -->
     <input type="submit" id="agregarcontacto" value="Agregar">
-    <input type="submit" class="button" value="Eliminar" onclick="test()"> 
+    
     </div>
     <!-- Este es el cuadro en el que salen -->
     <div id="fondo"></div>
