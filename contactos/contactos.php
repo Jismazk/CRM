@@ -74,6 +74,7 @@ if(!$result){
     <br>
     <!-- Estos son los dos botones -->
     <input type="submit" id="agregarcontacto" value="Agregar">
+    <a href="exportcon.php"></a>
     
     </div>
     <!-- Este es el cuadro en el que salen -->
