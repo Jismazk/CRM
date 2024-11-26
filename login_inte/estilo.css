@@ -80,18 +80,18 @@ input{
 }
 .box-inicio{
     width: 80%;
-    max-width: 1000px;
+    max-width: 90%;
     margin: auto;
-    margin-top: 5%;
+    padding: 0px;
 }
 .barnav{
     list-style: none;
-    padding: 0;
+    padding: 0px;
     background: black;
     width: 80%;
     max-width: 1000px;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 5px;
     border-radius: 10px;
    
 }
@@ -114,6 +114,7 @@ td{
     text-align: center;
     background: white;
     font-size: 18px;
+    
 }
 th{
     background-color: black;
@@ -122,20 +123,29 @@ th{
     border-radius: 5px;
     font-size: 18px;
 }
+
 table{
     border-collapse: collapse;
+    height: auto;
+   
     
 }
 .table{
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: auto;
+    height: 350px;
+
 }
+
+
+
 .box-contenido{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
     padding: 2%;
+
 }
 .contenido{
     width: 18rem;
