@@ -31,7 +31,9 @@ if(!$result){
         </ul>
         </nav>
         <br>  
-        <h1>Contactos</h1>
+   
+        <h1>Contactos</h1> 
+        
     <div class="table">
         <table class="tablita">
             <thead>
@@ -73,8 +75,8 @@ if(!$result){
     <br>
     <br>
     <!-- Estos son los dos botones -->
-    <input type="submit" id="agregarcontacto" value="Agregar">
-    <a href="exportcon.php"></a>
+     <input type="submit" id="agregarcontacto" value="Agregar">
+    <a href="exportcon.php"><button>Export</button></a>
     
     </div>
     <!-- Este es el cuadro en el que salen -->
