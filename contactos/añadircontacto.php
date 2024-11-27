@@ -10,7 +10,7 @@ include("../service/connection.php");
     $empresa = filter_input(INPUT_POST, "contacto-e", FILTER_SANITIZE_SPECIAL_CHARS);
     
 
-    $sql = "INSERT INTO `contactos`(`Empresa`,`Nombre`, `Apellido`, `Direccion`, `Correo`, `Numero`) 
+    $sql = "INSERT INTO `contactos`(`Nombre`, `Apellido`, `Direccion`, `Correo`, `Numero`,`Empresa`) 
     VALUES ('$nombre','$apellido','$direccion','$correo','$telefono','$empresa')";
       mysqli_query($conn,$sql);
       echo '
