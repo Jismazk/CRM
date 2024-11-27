@@ -111,7 +111,7 @@ if(!$result){
     <!-- Aqui va la logica -->
     <script>
         function edit_con(a){
-            window.location="añadircontacto.php?id="+a;
+            window.location="detallecontacto_edit.php?id="+a;
         }
         function validateForm(){
             var b = document.forms["añacon"]["contacto-a"].value;
