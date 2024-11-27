@@ -75,17 +75,15 @@ if(!$result){
     
     <br>
     <br>
-    
-    
+
     </div>
     <!-- Este es el cuadro en el que salen -->
-    <div id="fondo"></div>
+    <div id="fondo" ></div>
+   
 
     <!-- Esto es el contenido de la ventana -->
-    
-    
     <form  id="ventana" method="POST" action="añadircontacto.php" name="añacon">
-        <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
+    <button type="button" id="cerrarVentana">X</button> <h2>Agregar Contacto</h2>
 
         <label for="Empresa">Empresa</label>
         <input type="text" placeholder="Escribe la empresa" id="Empresa" name="contacto-e">
@@ -106,8 +104,8 @@ if(!$result){
         <input type="text" placeholder="ejem@gmail.com" id="Correo" name="contacto-c">
         <br>
         <button id="Añadir" type="submit" onclick="return validateForm()">Añadir</button>
+        
     </form>
-    
     <!-- Aqui va la logica -->
     <script>
         function edit_con(a){
@@ -169,6 +167,7 @@ if(!$result){
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     border-radius: 5px;
+    
     }
     #fondo {
     display: none; /* Ocultar por defecto */
@@ -180,15 +179,30 @@ if(!$result){
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     }
-    .botoncillo{
+    #cerrarVentana{
     background-color:red;
-    color:white;
-    font-size: 20px;
+    color: #FFFFFF;
     cursor: pointer;
-    margin-bottom: 5px;
-    left: 6%;
-    top: 0%;
-}
+    padding: 5px 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;  
+   }
+
+   #Añadir{
+    background-color: rgb(42, 72, 204);
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 9px 8px;
+    font-size: 17px;
+    border: black;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    outline: none;  
+    
+   }
     </style>
     </div>
 </body>

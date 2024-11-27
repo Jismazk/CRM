@@ -22,7 +22,6 @@ form{
     background-color:rgb(163, 163, 163);
     box-shadow: 0px 0px 30px black;
 }
-
 h2{
     text-align: center;
     font-size: 30px;
@@ -134,23 +133,30 @@ th{
     width: 6rem;
     border-radius: 5px;
     font-size: 18px;
-
+    position:sticky;
+    top:0;
+    z-index:1;
+    border-top:0;
+ 
 }
 
 table{
     border-collapse: collapse;
     height: auto;
+    position:sticky;
+    top:0;
+    z-index:1;
+    border-top:0;
+   
+    
 }
-.table {
+.table{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     height: 350px;
 
 }
-
-
-
 
 
 
