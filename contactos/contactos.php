@@ -106,7 +106,7 @@ if(!$result){
         <button id="Añadir" type="submit" onclick="return validateForm()">Añadir</button>
         
     </form>
-    <!-- Aqui va la logica -->
+    <!-- Aqui va la logica prueba de git asdkjfhadslfhdslkjf -->
     <script>
         function edit_con(a){
             window.location="detallecontacto_edit.php?id="+a;
