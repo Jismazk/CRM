@@ -15,7 +15,7 @@ include("../service/connection.php");
       mysqli_query($conn,$sql);
       echo '
       <script>
-        alert("Gracias por registrarte '.$nombre.'")
+        alert("Aqui esta su orden doncangrejo")
         window.location = "contactos.php";
       </script>
       ';
