@@ -127,7 +127,6 @@ td{
     text-align: center;
     background: white;
     font-size: 18px;
-    
 }
 th{
     background-color: black;
@@ -135,21 +134,23 @@ th{
     width: 6rem;
     border-radius: 5px;
     font-size: 18px;
+
 }
 
 table{
     border-collapse: collapse;
     height: auto;
-   
-    
 }
-.table{
+.table {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     height: 350px;
 
 }
+
+
+
 
 
 

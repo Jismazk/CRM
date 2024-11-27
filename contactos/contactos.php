@@ -36,16 +36,16 @@ if(!$result){
         <a href="exportcon.php"><button class="botonexportar">Export</button></a>
         
     <div class="table">
-        <table class="tablita">
+        <table>
             <thead>
                 <tr>
                     <th>Empresa</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Direccion</th>
-                    <th>email</th>
-                    <th>telefono</th>
-                    <th>endswitch</th> 
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Endswitch</th> 
                 </tr>
             </thead>
             <tbody>
@@ -82,9 +82,9 @@ if(!$result){
     <div id="fondo"></div>
 
     <!-- Esto es el contenido de la ventana -->
-    <div id="ventana">
     
-    <form method="POST" action="añadircontacto.php" name="añacon">
+    
+    <form  id="ventana" method="POST" action="añadircontacto.php" name="añacon">
         <h2>Agregar Contacto<button class="botoncillo" id="cerrarVentana">X</button></h2>
 
         <label for="Empresa">Empresa</label>
@@ -107,7 +107,7 @@ if(!$result){
         <br>
         <button id="Añadir" type="submit" onclick="return validateForm()">Añadir</button>
     </form>
-    </div>
+    
     <!-- Aqui va la logica -->
     <script>
         function edit_con(a){
