@@ -32,19 +32,20 @@ if(!$result){
         </nav>
         <br>  
    
-        <h1>Contactos</h1> 
+        <h1>Contactos</h1> <input type="submit" id="agregarcontacto" value="    +    ">
+        <a href="exportcon.php"><button class="botonexportar">Export</button></a>
         
     <div class="table">
         <table class="tablita">
             <thead>
                 <tr>
-                    <th >Empresa</th>
-                    <th >Nombre</th>
-                    <th >Apellido</th>
-                    <th >Direccion</th>
-                    <th >email</th>
-                    <th >telefono</th>
-                    <th >endswitch</th> 
+                    <th>Empresa</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Direccion</th>
+                    <th>email</th>
+                    <th>telefono</th>
+                    <th>endswitch</th> 
                 </tr>
             </thead>
             <tbody>
@@ -74,9 +75,7 @@ if(!$result){
     
     <br>
     <br>
-    <!-- Estos son los dos botones -->
-     <input type="submit" id="agregarcontacto" value="Agregar">
-    <a href="exportcon.php"><button>Export</button></a>
+    
     
     </div>
     <!-- Este es el cuadro en el que salen -->

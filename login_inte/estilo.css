@@ -36,7 +36,10 @@ h1{
     color: white;
     text-align: center;
     background: black;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: 22rem;
+    height: 3rem;
+    padding-top: 5px;
 }
 label{
     font-size: 17px;
@@ -56,6 +59,16 @@ input{
     margin-bottom: 25px;
     background-color: #FAFAFC;
     outline: none;      
+}
+.botonexportar{
+    padding: 9px 8px;
+    font-size: 15px;
+    border: rgb(15, 14, 14);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    outline: none; 
+    background-color: rgb(226, 20, 20); 
+    color: white; 
 }
 .button{
     background-color: rgb(42, 72, 204);
