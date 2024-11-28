@@ -4,6 +4,13 @@ $sql = "SELECT  * FROM  contactos";
 $result = mysqli_query($conn,$sql);
 if(!$result){
     echo "problema con la conexion";
+
+if($_SERVER["REQUEST_METHOD"] == $_GET){
+    if(!isset($_GET["id"])){
+        header("location: /contactos/contacos.php");
+        exit;
+    }
+}
 }
 ?>
 <!DOCTYPE html>
