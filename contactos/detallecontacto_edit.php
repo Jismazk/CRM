@@ -1,13 +1,17 @@
 <?php
 include("../service/connection.php");
-$sql = "SELECT  * FROM  contactos";
+$sql = "SELECT  * FROM  contactos where id =";
 $result = mysqli_query($conn,$sql);
 if(!$result){
     echo "problema con la conexion";
-
+}
+    if(!isset($_GET["id"])){
+        header("location: contactos.php");
+        exit;
+    
 if($_SERVER["REQUEST_METHOD"] == $_GET){
     if(!isset($_GET["id"])){
-        header("location: /contactos/contacos.php");
+        header("location: contactos/contactos.php");
         exit;
     }
 }
@@ -17,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == $_GET){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
     <title>Document</title>
  
    
