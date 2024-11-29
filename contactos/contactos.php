@@ -25,7 +25,7 @@ if(!$result){
             <ul>
             <li><a href="../login_inte/home.html">Inicio</a></li>
             <li><a href="contactos.php">Contactos</a></li>
-            <li><a href="ordenes.html">Órdenes</a></li>
+            <li><a href="../ordenes/ordenes.php">Órdenes</a></li>
             <li><a href="candidatos.html">Candidatos</a></li>
             <li><a href="clientes.html">Clientes</a></li>
         </ul>
