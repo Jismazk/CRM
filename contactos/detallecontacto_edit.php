@@ -44,7 +44,7 @@ include("../service/connection.php");
 <body>
     <div class="detallesusuario">
         <h2>Detalles del contacto</h2>
-    <form action="<?php $_SERVER["PHP_SELF"] ?>" method="POST"  >
+    <form action="<?php $_SERVER["PHP_SELF"] ?>" method="POST"  name="editi">
     <label for="Empresa">Empresa</label>
     <input type="text" id="Empresa" name="contactoedit-e" value="<?php echo $row["Empresa"] ?>">
 
@@ -61,14 +61,28 @@ include("../service/connection.php");
     <input type="text" id="" name="contactoedit-d" value="<?php echo $row["Direccion"] ?>">
 
     <label for="Correo">Correo</label>
-    <input type="text" id="Correo" name="contactoedit-c" value="<?php echo $row["Correo"] ?>">
+    <input type="email" id="Correo" name="contactoedit-c" value="<?php echo $row["Correo"] ?>">
 
     
     <br>
-        <button id="Actualizar" type="submit" onclick="">Actualizar</button>
+        <button id="Actualizar" type="submit" onclick="return validateForm() ">Actualizar</button>
     </form>
 
     </div>
-  
+    <script>
+    function validateForm(){
+            var b = document.forms["editi"]["contactoedit-a"].value;
+            var a = document.forms["editi"]["contactoedit-n"].value;
+            var c = document.forms["editi"]["contactoedit-t"].value;
+            var d = document.forms["editi"]["contactoedit-d"].value;
+            var f = document.forms["editi"]["contactoedit-c"].value;
+            var g = document.forms["editi"]["contactoedit-e"].value;
+
+            if(a == "" || b == "" || c == "" ||d == "" ||f == "" || g == "" ){
+                alert("Favor de rellenar todos los campos ");
+                return false;
+            }
+        }
+    </script>
 
 </body>

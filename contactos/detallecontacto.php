@@ -39,9 +39,22 @@ if(!$result){
 
     
     <br>
-        <button id="Actualizar" type="submit" onclick="">Actualizar</button>
+        <button id="Actualizar" type="submit" onclick="return validateform()">Actualizar</button>
 
     </div>
+    <script>
+    function validateForm(){
+            var b = document.forms["añacon"]["contacto-a"].value;
+            var a = document.forms["añacon"]["contacto-n"].value;
+            var c = document.forms["añacon"]["contacto-t"].value;
+            var d = document.forms["añacon"]["contacto-d"].value;
+            var f = document.forms["añacon"]["contacto-c"].value;
+            if(a == "" || b == "" || c == "" ||d == "" ||f == "" ){
+                alert("Favor de rellenar todos los campos ");
+                return false;
+            }
+        }
+    </script>
   
 
 </body>
