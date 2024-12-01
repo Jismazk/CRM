@@ -12,16 +12,57 @@ if(!$result){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../login_inte/estilo.css">
 </head>
 <body>
-<div>
-    <h2>Detalles de la orden</h2>
+<div class="box-inicio">
+<nav class="barnav">
+            <ul>
+            <li><a href="../login_inte/home.html">Inicio</a></li>
+            <li><a href="../contactos/contactos.php">Contactos</a></li>
+            <li><a href="../ordenes/ordenes.php">Órdenes</a></li>
+            <li><a href="candidatos.html">Candidatos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+        </nav>
+        <br>  
+    <h1>Detalles de la orden</h1>
+    <div class="detallesor">
     <label for="idOrden">Id_Orden</label>
-    <input type="text" id="idOrden" name="idorden">
+    <input type="text" id="idOrden" name="idOrden">
+    <label for="">Contacto</label>
+    <input type="text" id="idContacto" name="">
+    <label for="">Empresa</label>
+    <input type="text" id="" name="">
+    <label for="">Transacción</label>
+    <input type="text" name="" id="">
+    <label for="">No.Empleado</label>
+    <input type="text" name="" id="">
+    <label for="">Fecha-inicio</label>
+    <input type="text" id="" name="">
+    <label for="">Fecha-fin</label>
+    <input type="text" name="" id="">
+    <label for="">Estado</label>
+    <input type="text" name="" id="">
+    <label for="">Producto</label>
+    <input type="text" name="" id="">
+    <label for="">Cantidad</label>
+    <input type="text" name="" id="">
+    </div>
 
-    
+   
     <br>
         <button id="Actualizar" type="submit" onclick="">Actualizar</button>
     </div>
+    <style>
+        label{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            width: 10rem;
+            padding-left:5px;
+        }
+        
+    </style>
 </body>
 </html>

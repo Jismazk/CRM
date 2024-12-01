@@ -12,11 +12,24 @@ if(!$result){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
  
    
 </head>
 
 <body>
+<div class="box-inicio">
+<nav class="barnav">
+            <ul>
+            <li><a href="../login_inte/home.html">Inicio</a></li>
+            <li><a href="../contactos/contactos.php">Contactos</a></li>
+            <li><a href="../ordenes/ordenes.php">Órdenes</a></li>
+            <li><a href="candidatos.html">Candidatos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+        </nav>
+        <br>  
+
     <div class="detallesusuario">
         <h2>Detalles del contacto</h2>
     <label for="Empresa">Empresa</label>
@@ -42,19 +55,7 @@ if(!$result){
         <button id="Actualizar" type="submit" onclick="return validateform()">Actualizar</button>
 
     </div>
-    <script>
-    function validateForm(){
-            var b = document.forms["añacon"]["contacto-a"].value;
-            var a = document.forms["añacon"]["contacto-n"].value;
-            var c = document.forms["añacon"]["contacto-t"].value;
-            var d = document.forms["añacon"]["contacto-d"].value;
-            var f = document.forms["añacon"]["contacto-c"].value;
-            if(a == "" || b == "" || c == "" ||d == "" ||f == "" ){
-                alert("Favor de rellenar todos los campos ");
-                return false;
-            }
-        }
-    </script>
+    </div>
   
 
 </body>

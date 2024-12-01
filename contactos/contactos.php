@@ -61,8 +61,13 @@ if(!$result){
               <td>".$row["Direccion"]."</td>
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
+<<<<<<< HEAD
               <td><input  type='submit' class='button' onclick='' value='Eliminar'>
               <input type='submit' class='button' value='editar' onclick='edit_con(".$row["id_contacto"].")'>
+=======
+              <td><input  type='submit' class='button' onclick='header()' value='Eliminar'>
+              <input type='submit' class='button' value='Editar' onclick='edit_con(".$row["id_contacto"].")'>
+>>>>>>> 09954ded5b0336f713ac4d3d417ed96f54d70b39
               
               </td>
             </tr>
