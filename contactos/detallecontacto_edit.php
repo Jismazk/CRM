@@ -11,7 +11,7 @@ include("../service/connection.php");
   }
   if($_SERVER["REQUEST_METHOD"] == "POST"){
     $nom = filter_input(INPUT_POST,"contactoedit-n",FILTER_SANITIZE_SPECIAL_CHARS);
-    $up = "UPDATE contactos set id_contacto = '$d'";
+    $up = "UPDATE contactos set Nombre = '$nom' where id_contacto = '$d'";
     $update = mysqli_query($conn,$up);
   }
 
