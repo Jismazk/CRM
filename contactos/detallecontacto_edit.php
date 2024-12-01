@@ -10,9 +10,23 @@ include("../service/connection.php");
         exit;
   }
   if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $corr = filter_input(INPUT_POST,"contactoedit-c",FILTER_SANITIZE_SPECIAL_CHARS);
+    $dir = filter_input(INPUT_POST,"contactoedit-d",FILTER_SANITIZE_SPECIAL_CHARS);
+    $apell = filter_input(INPUT_POST,"contactoedit-a",FILTER_SANITIZE_SPECIAL_CHARS);
     $nom = filter_input(INPUT_POST,"contactoedit-n",FILTER_SANITIZE_SPECIAL_CHARS);
-    $up = "UPDATE contactos set Nombre = '$nom' where id_contacto = '$d'";
+    $emp = filter_input(INPUT_POST,"contactoedit-e",FILTER_SANITIZE_SPECIAL_CHARS);
+    $tel = filter_input(INPUT_POST,"contactoedit-t",FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $up = "UPDATE contactos set Nombre = '$nom',
+     Apellido = '$apell', 
+     Direccion = '$dir', 
+     Correo = '$corr', 
+     Numero ='$tel',
+     Empresa = '$emp' where id_contacto = '$d'";
+    
     $update = mysqli_query($conn,$up);
+    
+    header("location: contactos.php");
   }
 
 ?>
