@@ -6,6 +6,7 @@ $result = mysqli_query($conn,$sql);
 if(!$result){
     echo "problema con la conexion";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +61,7 @@ if(!$result){
               <td>".$row["Direccion"]."</td>
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
-              <td><input  type='submit' class='button' onclick='header()'>
+              <td><input  type='submit' class='button' onclick='' value='Eliminar'>
               <input type='submit' class='button' value='editar' onclick='edit_con(".$row["id_contacto"].")'>
               
               </td>
