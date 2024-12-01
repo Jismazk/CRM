@@ -52,10 +52,10 @@ if(!$result){
 
     
     <br>
-        <button id="Actualizar" type="submit" onclick="">Actualizar</button>
+        <button id="Actualizar" type="submit" onclick="return validateform()">Actualizar</button>
 
     </div>
     </div>
-
+  
 
 </body>
