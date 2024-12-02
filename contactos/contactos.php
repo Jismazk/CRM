@@ -16,26 +16,17 @@ if(!$result){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../login_inte/estilo.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 
 
 <body>
+
     <div class="box-inicio">
-    <nav class="barnav">
-            <ul>
-            <li><a href="../login_inte/home.html">Inicio</a></li>
-            <li><a href="contactos.php">Contactos</a></li>
-            <li><a href="../ordenes/ordenes.php">Órdenes</a></li>
-            <li><a href="candidatos.html">Candidatos</a></li>
-            <li><a href="clientes.html">Clientes</a></li>
-            <li><a href="perfil.html"><img src="../img/profile_circle_icon_242774.webp" alt="perfilima" height="15rem" ></a></a></li>
-        </ul>
-        </nav>
+    <header><?php include("../login_inte/navbar.php"); ?></header>
         <br>  
-   
-        <h1>Contactos</h1> <input type="submit" id="agregarcontacto" value="    +    ">
+        <h1>Contactos</h1>
+        <input type="submit" id="agregarcontacto" value="    +    ">
         <a href="exportcon.php"><button class="botonexportar">Export</button></a>
         
     <div class="table">
@@ -65,9 +56,10 @@ if(!$result){
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
               <td>
+              <div class='button-container-icon'>
               <button><img src='../img/editar.png' alt='editar' width='25rem' height='25rem' align='start'  onclick='edit_con(".$row["id_contacto"].")'>
               <button id='btneliminar'><img src='../img/eliminar.png' alt='eliminar' width='25rem' height='25rem' align='end' onclick=''>
-             
+             </div>
               </td>
             </tr>
             "; 
@@ -78,10 +70,6 @@ if(!$result){
             </tbody>
         </table>
     </div>
-    
-    <br>
-    <br>
-
     </div>
 
     <div id="myModal" class="modal">

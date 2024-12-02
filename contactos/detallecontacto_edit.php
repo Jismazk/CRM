@@ -44,17 +44,7 @@ include("../service/connection.php");
 
 <body>
 <div class="box-inicio">
-        <nav class="barnav">
-            <ul>
-            <li><a href="home.html">Inicio</a></li>
-            <li><a href="../contactos/contactos.php">Contactos</a></li>
-            <li><a href="usuarios.html">Usuarios</a></li>
-            <li><a href="ordenes.html">Órdenes</a></li>
-            <li><a href="candidatos.html">Candidatos</a></li>
-            <li><a href="clientes.html">Clientes</a></li>
-
-        </ul>
-        </nav>
+<?php include("../login_inte/navbar.php"); ?>
     <br>
      <h1>Detalles del contacto</h1>
     

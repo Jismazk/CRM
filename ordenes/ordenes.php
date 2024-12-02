@@ -14,19 +14,15 @@ if(!$result){
     <title>Document</title>
     <link rel="stylesheet" href="../login_inte/estilo.css">
 </head>
+<body>
 <div class="box-inicio">
-<nav class="barnav">
-            <ul>
-            <li><a href="../login_inte/home.html">Inicio</a></li>
-            <li><a href="../contactos/contactos.php">Contactos</a></li>
-            <li><a href="../ordenes/ordenes.php">Órdenes</a></li>
-            <li><a href="candidatos.html">Candidatos</a></li>
-            <li><a href="clientes.html">Clientes</a></li>
-        </ul>
-        </nav>
-        <br>  
-    <div class="table">
+<header><?php include("../login_inte/navbar.php"); ?></header>
+        <br>
         <h1>Órdenes</h1>
+        <input type="submit" id="agregarorden" value="Añadir órden" >
+        <br>
+        <br>
+        <div class="table">
         <table>
             <thead>
                 <tr>
@@ -63,5 +59,15 @@ if(!$result){
         </script>
     </div>
 </div>
+<style>
+    #agregarorden{
+    background-color: rgb(42, 72, 204);
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-bottom: 5px;
+    
+    }
+</style>
 </body>
 </html>
