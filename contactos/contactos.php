@@ -64,15 +64,17 @@ if(!$result){
               <td>".$row["Direccion"]."</td>
               <td>".$row["Correo"]."</td>
               <td>".$row["Numero"]."</td>
-              <td><input  type='submit' class='button' id='btneliminar' onclick='' value='Eliminar'>
-              <input type='submit' class='button' value='editar' onclick='edit_con(".$row["id_contacto"].")'>
+              <td>
+              <button><img src='../img/editar.png' alt='editar' width='25rem' height='25rem' align='start'  onclick='edit_con(".$row["id_contacto"].")'>
+              <button id='btneliminar'><img src='../img/eliminar.png' alt='eliminar' width='25rem' height='25rem' align='end' onclick=''>
+             
               </td>
             </tr>
             "; 
             }
            
             ?>
-           
+            
             </tbody>
         </table>
     </div>
@@ -86,9 +88,12 @@ if(!$result){
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>¿Esta seguro que desea eliminar este contacto?</h2>
+      <br>
       <p>
-        <button>Eliminar</button>
-        <button>Cancelar</button>
+        <div class="button-container">
+        <button class="butonelim" id="">Eliminar</button>
+        <button class="butonelim" id="btncancelar">Cancelar</button>
+        </div>
      </p>
     </div>
     </div>
@@ -97,7 +102,7 @@ if(!$result){
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("btneliminar");
 var span = document.getElementsByClassName("close")[0];
-
+var btnc = document.getElementById("btncancelar");
 
      btn.onclick = function() {
      modal.style.display = "block";
@@ -112,6 +117,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+btnc.onclick =function(){
+ modal.style.display = "none";
+}
 </script>
 
    <style>
@@ -125,17 +133,21 @@ window.onclick = function(event) {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+  
 }
 
 /* Estilos para el contenido de la modal */
 .modal-content {
-    border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
+  display: block;
+  
+  
 }
 
 /* Estilos para el botón de cierre (X) */
@@ -184,13 +196,7 @@ window.onclick = function(event) {
         <button id="Añadir" type="submit" onclick="return validateForm()">Añadir</button>
         
     </form>
-    <form  id="ventana2" method="POST" action="" name="">
-    <button type="button" id="cerrarVentana2">X</button> <h2>Eliminar contacto</h2>
-    <label >¿Esta seguro que desea eliminar este contacto?</label>
-        <br>
-        <button id="eliminarcontacto" type="submit" onclick="">Eliminar</button>
-        
-    </form>
+
     <!-- Aqui va la logica prueba de git asdkjfhadslfhdslkjf -->
     <script>
         function edit_con(a){
@@ -208,28 +214,16 @@ window.onclick = function(event) {
                 return false;
             }
         }
-    const mostrarVentanaBtnEliminar = document.getElementById('eliminarcontacto')
     const mostrarVentanaBtn = document.getElementById('agregarcontacto');
     const cerrarVentanaBtn = document.getElementById('cerrarVentana');
-    const cerrarVentanaBtnE =document.getElementById('cerrarVentana2');
     const ventana = document.getElementById('ventana');
-    const ventana2 =document.getElementById('ventana2');
     const fondo = document.getElementById('fondo');
-    const fondo2 =document.getElementById('fondo2');
 
-    mostrarVentanaBtnEliminar.addEventListener('click',function(){
-        ventana2.style.display = 'block';
-        fondo2.style.display = 'block';
-    });
     mostrarVentanaBtn.addEventListener('click', function() {
         ventana.style.display = 'block';
         fondo.style.display = 'block';
     });
 
-    cerrarVentanaBtnE.addEventListener('click',function(){
-        ventana2.style.display = 'none';
-        fondo2.style.display = 'none';
-    });
     cerrarVentanaBtn.addEventListener('click', function() {
         ventana.style.display = 'none';
         fondo.style.display = 'none';
@@ -239,10 +233,6 @@ window.onclick = function(event) {
     fondo.addEventListener('click', function() {
         ventana.style.display = 'none';
         fondo.style.display = 'none';
-    });
-    fondo2.addEventListener('click', function() {
-        ventana2.style.display = 'none';
-        fondo2.style.display = 'none';
     });
     </script>
 
@@ -256,30 +246,7 @@ window.onclick = function(event) {
     margin-bottom: 5px;
     
     }
-    #eliminarcontacto{
-    background-color: rgb(42, 72, 204);
-    font-size: 15px;
-    color: #FFFFFF;
-    cursor: pointer;
-    margin-bottom: 5px;
-    
-    }
     #ventana {
-    display: none; /* Ocultar por defecto */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    padding: 20px;
-    background-color: rgb(226, 223, 223);
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border-radius: 5px;
-    
-    }
-    #ventana2 {
     display: none; /* Ocultar por defecto */
     position: fixed;
     top: 50%;
@@ -304,16 +271,6 @@ window.onclick = function(event) {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     }
-    #fondo2 {
-    display: none; /* Ocultar por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    }
     #cerrarVentana{
     background-color:red;
     color: #FFFFFF;
@@ -325,18 +282,6 @@ window.onclick = function(event) {
     margin-bottom: 15px;
     outline: none;  
    }
-   #cerrarVentana2{
-    background-color:red;
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 5px 8px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    outline: none;  
-   }
-
    #Añadir{
     background-color: rgb(42, 72, 204);
     color: #FFFFFF;

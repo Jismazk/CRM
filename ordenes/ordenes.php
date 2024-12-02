@@ -46,13 +46,14 @@ if(!$result){
                     <td>".$row["idOrden"]."</td>
                     <td>".$row["FechaInicio"]."</td>
                     <td>".$row["FechaFinal"]."</td>
-                    <td> <input type='submit' class='button' value='i' onclick='info(".$row["idOrden"].")'></td>
+                    <td> <button><img src='../img/info.png' alt='info'  width='20rem' height='20rem' align='center' onclick='info(".$row["idOrden"].")'</button</td>
 
                    
                 </tr>
                 ";
             }
             ?>
+            
             </tbody>
         </table>
         <script>

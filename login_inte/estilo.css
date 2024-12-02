@@ -13,6 +13,7 @@ body{
     height: 100vh;
     width: 100%;
     font-family: Helvetica, sans-serif;
+    position: relative;
 }
 form{
     padding: 50px;
@@ -27,10 +28,10 @@ form{
     padding: 20px;
     display: flex;
     flex-direction:column;
-    width: 100%;
+    width: 70%;
     height: 50%;
     border-radius: 15px;
-    background-color:none;
+    background-color: rgb(214, 214, 214);
     box-shadow: none;
     position:sticky;
     top:0;
@@ -38,6 +39,12 @@ form{
     border-top:0;
     overflow-y: auto;
     height: 350px;
+    align-content: center;
+}
+.inpudetalles{
+    background-color: rgb(230, 230, 230);
+    border-radius: 2px;
+    width: 100%;
 }
 h2{
     text-align: center;
@@ -93,8 +100,44 @@ input{
     color: #FFFFFF;
     cursor: pointer;
     margin-bottom: 5px;
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block;
+    
 }
-
+.butonelim{
+    background-color: rgb(218, 219, 219);
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: auto;
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 10px 20px;
+    border: none;
+}
+.butonelim:hover{
+    background-color: rgb(63, 89, 238);
+}
+.button-container {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+    margin: 0 auto; /* Centra horizontalmente */
+    
+  }
+.buttonactu{
+    background-color: rgb(42, 72, 204);
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 15%;
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block;
+    padding: 10px 20px;
+    
+}
 
 .registro{
     padding: 15px 30px;

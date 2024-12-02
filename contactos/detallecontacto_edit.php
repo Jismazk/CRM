@@ -60,27 +60,28 @@ include("../service/connection.php");
     
     <form class="detalles" action="<?php $_SERVER["PHP_SELF"] ?>" method="POST"  name="editi">
     <label for="Empresa">Empresa</label>
-    <input type="text" id="Empresa" name="contactoedit-e" value="<?php echo $row["Empresa"] ?>">
+    <input class="inpudetalles" type="text" id="Empresa" name="contactoedit-e" value="<?php echo $row["Empresa"] ?>">
 
     <label for="Nombre">Nombre</label>
-    <input type="text" id="Nombre" name="contactoedit-n" value="<?php echo $row["Nombre"] ?>">
+    <input class="inpudetalles" type="text" id="Nombre" name="contactoedit-n" value="<?php echo $row["Nombre"] ?>">
 
     <label for="ApellidoP">Apellido</label>
-    <input type="text" id="ApellidoP" name="contactoedit-a" value="<?php echo $row["Apellido"] ?>">
+    <input class="inpudetalles" type="text" id="ApellidoP" name="contactoedit-a" value="<?php echo $row["Apellido"] ?>">
 
     <label for="Telefono">Telefono</label>
-    <input type="tel"  id="Telefono" name="contactoedit-t" value="<?php echo $row["Numero"] ?>">
+    <input class="inpudetalles" type="tel"  id="Telefono" name="contactoedit-t" value="<?php echo $row["Numero"] ?>">
 
     <label for="Direccion">Direccion</label>
-    <input type="text" id="" name="contactoedit-d" value="<?php echo $row["Direccion"] ?>">
+    <input class="inpudetalles"  type="text" id="" name="contactoedit-d" value="<?php echo $row["Direccion"] ?>">
 
     <label for="Correo">Correo</label>
-    <input type="email" id="Correo" name="contactoedit-c" value="<?php echo $row["Correo"] ?>">
-
-    
+    <input class="inpudetalles" type="email" id="Correo" name="contactoedit-c" value="<?php echo $row["Correo"] ?>">
     <br>
-        <button id="Actualizar" type="submit" onclick="return validateForm() ">Actualizar</button>
+    <button class="buttonactu"  id="Actualizar"type="submit" onclick="return validateForm() ">Actualizar</button>
     </form>
+    <br>
+    <br>
+
     
     <script>
     function validateForm(){
