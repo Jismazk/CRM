@@ -37,14 +37,28 @@ include("../service/connection.php");
     <meta charset="UTF-8">
     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../login_inte/estilo.css">
  
    
 </head>
 
 <body>
-    <div class="detallesusuario">
-        <h2>Detalles del contacto</h2>
-    <form action="<?php $_SERVER["PHP_SELF"] ?>" method="POST"  name="editi">
+<div class="box-inicio">
+        <nav class="barnav">
+            <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="../contactos/contactos.php">Contactos</a></li>
+            <li><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="ordenes.html">Órdenes</a></li>
+            <li><a href="candidatos.html">Candidatos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+
+        </ul>
+        </nav>
+    <br>
+     <h1>Detalles del contacto</h1>
+    
+    <form class="detalles" action="<?php $_SERVER["PHP_SELF"] ?>" method="POST"  name="editi">
     <label for="Empresa">Empresa</label>
     <input type="text" id="Empresa" name="contactoedit-e" value="<?php echo $row["Empresa"] ?>">
 
@@ -67,8 +81,7 @@ include("../service/connection.php");
     <br>
         <button id="Actualizar" type="submit" onclick="return validateForm() ">Actualizar</button>
     </form>
-
-    </div>
+    
     <script>
     function validateForm(){
             var b = document.forms["editi"]["contactoedit-a"].value;

@@ -12,11 +12,8 @@ if(!$result){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
- 
-   
+    <link rel="stylesheet" href="../login_inte/estilo.css">  
 </head>
-
 <body>
 <div class="box-inicio">
 <nav class="barnav">
@@ -30,8 +27,9 @@ if(!$result){
         </nav>
         <br>  
 
-    <div class="detallesusuario">
-        <h2>Detalles del contacto</h2>
+    
+        <h1>Detalles del contacto</h1>
+        <div class="detalles">
     <label for="Empresa">Empresa</label>
     <input type="text" id="Empresa" name="contacto-e">
 
@@ -59,3 +57,4 @@ if(!$result){
   
 
 </body>
+</html>

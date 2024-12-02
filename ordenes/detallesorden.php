@@ -27,7 +27,7 @@ if(!$result){
         </nav>
         <br>  
     <h1>Detalles de la orden</h1>
-    <div class="detallesor">
+    <div class="detalles">
     <label for="idOrden">Id_Orden</label>
     <input type="text" id="idOrden" name="idOrden">
     <label for="">Contacto</label>
@@ -48,11 +48,12 @@ if(!$result){
     <input type="text" name="" id="">
     <label for="">Cantidad</label>
     <input type="text" name="" id="">
-    </div>
 
    
     <br>
-        <button id="Actualizar" type="submit" onclick="">Actualizar</button>
+    <button id="Actualizar" type="submit" onclick="return validateform()">Actualizar</button>
+    
+    </div>
     </div>
     <style>
         label{
@@ -62,7 +63,18 @@ if(!$result){
             width: 10rem;
             padding-left:5px;
         }
-        
+        input{
+            width: 100%;
+            background-color:gainsboro;
+            border: black;
+            outline: black;
+        }
+        .detalles{
+            width: 100%;
+            background-color: white;
+            
+        }
     </style>
+
 </body>
 </html>
