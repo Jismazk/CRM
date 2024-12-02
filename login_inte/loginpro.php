@@ -9,13 +9,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    
 
    
-        $sql = "CALL login_usuario('$correo');";
+        $sql = "CALL LoginUser('$correo','$password');";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)>0){    
          $row = mysqli_fetch_assoc($result);
-         if($password == $row["contraseña"]){
+         if($row["token"] != null ){
             echo '
-            <script>
+            <script> 
             alert("Bienvenido" );
             window.location = "home.html";
             </script>

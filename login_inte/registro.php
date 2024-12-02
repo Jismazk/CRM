@@ -8,7 +8,7 @@ include("../service/connection.php");
         $apellido = filter_input(INPUT_POST, "apellido-registro", FILTER_SANITIZE_SPECIAL_CHARS);
         
  
-            $sql = "CALL registro_usuario('$correo','$password','$nombre','$apellido');";
+            $sql = "CALL CreateUser('$correo','$password','$nombre','$apellido', NULL);";
             mysqli_query($conn,$sql);
             echo '
             <script>
