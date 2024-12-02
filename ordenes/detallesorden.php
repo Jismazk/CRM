@@ -29,17 +29,17 @@ if(!$result){
     <h1>Detalles de la orden</h1>
     <div class="detallesor">
     <label for="idOrden">Id_Orden</label>
-    <input type="text" id="idOrden" name="idOrden">
+    <input type="text"  name="idOrden" id="">
     <label for="">Contacto</label>
-    <input type="text" id="idContacto" name="">
+    <input type="text"  name="" id="">
     <label for="">Empresa</label>
-    <input type="text" id="" name="">
+    <input type="text"  name="" id="">
     <label for="">Transacción</label>
-    <input type="text" name="" id="">
+    <input type="text" name="tran" id="">
     <label for="">No.Empleado</label>
-    <input type="text" name="" id="">
+    <input type="text" name="iduser" id="">
     <label for="">Fecha-inicio</label>
-    <input type="text" id="" name="">
+    <input type="text"  name="" id="">
     <label for="">Fecha-fin</label>
     <input type="text" name="" id="">
     <label for="">Estado</label>
