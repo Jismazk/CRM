@@ -11,12 +11,25 @@
     <?php include("../login_inte/navbar.php"); ?>
     <br>
     <div class="box-contenido">
-    <div class="contenido"></div>
+        
+    <div class="contenido">B I E N V E N I D O</div>
+    </div>
     <br>
-    <div class="contenido"></div>
     <br>
-    <div class="contenido"></div>
-    </div> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     </div>
 </body>
 
