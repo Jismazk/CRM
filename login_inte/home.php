@@ -7,28 +7,17 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+
     <div class="box-inicio">
-    <?php include("../login_inte/navbar.php"); ?>
+        <header>
+    <?php include("../login_inte/navbar.php"); ?></header>
     <br>
     <div class="box-contenido">
         
     <div class="contenido">B I E N V E N I D O</div>
     </div>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
 
     </div>
 </body>
