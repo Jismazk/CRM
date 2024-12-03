@@ -44,7 +44,7 @@ include("../service/connection.php");
 
 <body>
 <div class="box-inicio">
-<?php include("../login_inte/navbar.php"); ?>
+    <header><?php include("../login_inte/navbar.php"); ?></header>
     <br>
      <h1>Detalles del contacto</h1>
     

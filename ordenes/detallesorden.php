@@ -17,21 +17,22 @@ if(!$result){
 <body>
 
 <div class="box-inicio">
-<?php include("../login_inte/navbar.php"); ?>
+    <header><?php include("../login_inte/navbar.php"); ?></header>
+
         
         <br>  
     <h1>Detalles de la orden</h1>
 
-    <form class="detalles" action="<?php $_SERVER["PHP_SELF"] ?>" method="POST"  name="editiorden">
+    <form class="detalles" action="" method="POST"  name="editiorden">
 
     <label for="idOrden">Id_Orden</label>
     <input class="inpudetalles" type="text"  name="idOrden" id="">
 
     <label for="">Contacto</label>
-    <input class="inpudetalles" type="text" id="Nombre" name="contactoedit-n" value="<?php echo $row["Nombre"] ?>">
+    <input class="inpudetalles" type="text" id="Nombre" name="contactoedit-n" value="">
 
     <label for="">Empresa</label>
-    <input class="inpudetalles" type="text" id="Empresa" name="contactoedit-e" value="<?php echo $row["Empresa"] ?>">
+    <input class="inpudetalles" type="text" id="Empresa" name="contactoedit-e" value="">
 
     <label for="">Transacción</label>
     <input class="inpudetalles" type="text" name="tran" id="">
